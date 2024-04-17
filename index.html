@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC" />
+    <title>DAFC</title>
+</head>
+
+<body 
+    style="background-color: #1a1b1d;
+        font-family: 'Amatic SC', sans-serif;
+        color: white;">
+    <div class="w3-bar w3-xlarge w3-white">
+        <a class="w3-bar-item w3-button w3-hover-none"><strong>DAFC</strong></a>
+        <a class="w3-bar-item w3-right w3-button w3-hover-none"><strong>Total:<input
+                style="pointer-events: none" type="text" id="output" /></strong></a>
+    </div>
+
+    <div class="w3-row w3-margin w3-padding">
+        <div class="w3-col l3 ">
+            <div class="w3-display-container">
+                <img class="w3-round-xlarge" src="./img/bigmac.jpg" style="width:100%">
+                <p>Big Mac<b class="w3-right">$2.00</b></p>
+                <div class="w3-display-middle w3-display-hover">
+                    <button id="2" class="w3-button w3-black"><i class="fa fa-plus" onclick="add(2)"></i></button>
+                    <button id="2" class="w3-button w3-black"><i class="fa fa-minus" onclick="rem(2)"></i></button>
+                </div>
+            </div>
+            <div class="w3-display-container w3-padding">
+                <img class="w3-round-xlarge" src="./img/wings.jpg" style="width:100%">
+                <div class="w3-display-middle w3-display-hover">
+                    <button id="10" class="w3-button w3-black" onclick="add(10)"><i class="fa fa-plus" ></i></button>
+                    <button id="10" class="w3-button w3-black" onclick="rem(10)"><i class="fa fa-minus"></i></button>
+                </div>
+                <p>Chicken Wings<b class="w3-right">$10.00</b></p>
+            </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+            <div class="w3-container">
+                <div class="w3-display-container">
+                    <img class="w3-round-xlarge" src="./img/burger.jpg" style="width:100%">
+                    <span class="w3-tag w3-display-topleft">Limited</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <button id="7" class="w3-button w3-black" onclick="add(7)"><i class="fa fa-plus"></i></button>
+                        <button id="7" class="w3-button w3-black" onclick="rem(7)"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <p>Broasted Chicken Burger<b class="w3-right">$7.00</b></p>
+            </div>
+            <div class="w3-display-container w3-padding">
+                <img class="w3-round-xlarge" src="./img/fries2.jpg" style="width:100%">
+                <div class="w3-display-middle w3-display-hover">
+                    <button id="10" class="w3-button w3-black" onclick="add(10)"><i class="fa fa-plus"></i></button>
+                    <button id="10" class="w3-button w3-black" onclick="rem(10)"><i class="fa fa-minus"></i></button>
+                </div>
+                <p>Loaded Fries<b class="w3-right">$10.00</b></p>
+            </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+            <div class="w3-display-container">
+                <img class="w3-round-xlarge" src="./img/fries.jpg" style="width:100%">
+                <p>Fries<b class="w3-right">$3.00</b></p>
+                <div class="w3-display-middle w3-display-hover">
+                    <button id="3" class="w3-button w3-black" onclick="add(3)"><i class="fa fa-plus"></i></button>
+                    <button id="3" class="w3-button w3-black" onclick="rem(3)"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="w3-display-container w3-padding">
+                <div class="w3-display-container">
+                    <img class="w3-round-xlarge" src="./img/family.jpg" style="width:100%">
+                    <span class="w3-tag w3-display-topleft">Sale</span>
+                    <div class="w3-display-middle w3-display-hover">
+                        <button id="20" class="w3-button w3-black" onclick="add(20)"><i class="fa fa-plus"></i></button>
+                        <button id="20" class="w3-button w3-black" onclick="rem(20)"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+                <p>Combo Pack<b class="w3-right">$20.00</b></p>
+            </div>
+        </div>
+
+        <div class="w3-col l3 s6">
+            <div class="w3-display-container w3-padding">
+                <img class="w3-round-xlarge" src="./img/sandwich.jpg" style="width:100%">
+                <div class="w3-display-middle w3-display-hover">
+                    <button id="15" class="w3-button w3-black" onclick="add(15)"><i class="fa fa-plus"></i></button>
+                    <button id="15" class="w3-button w3-black" onclick="rem(15)"><i class="fa fa-minus"></i></button>
+                </div>
+                <p>Sandwich<b class="w3-right">$15.00</b></p>
+            </div>
+            <div class="w3-display-container w3-padding">
+                <img class="w3-round-xlarge" src="./img/wings2.jpg" style="width:100%">
+                <div class="w3-display-middle w3-display-hover">
+                    <button id="15" class="w3-button w3-black" onclick="add(15)"><i class="fa fa-plus"></i></button>
+                    <button id="15" class="w3-button w3-black" onclick="rem(15)"><i class="fa fa-minus"></i></button>
+                </div>
+                <p>Combo Hot Wings<b class="w3-right">$15.00</b></p>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
